@@ -55,11 +55,18 @@ export class im {
     path: AssocPath,
     value: O,
   ): Readonly<T>;
-  public static assoc<T extends Record<string, unknown>, O extends Record<string, unknown>>(
+  public static assoc<
+    T extends Record<string, unknown>,
+    O extends Record<string, unknown>,
+  >(
     obj: T,
     obj2: O,
   ): Readonly<Omit<T, keyof O> & O>;
-  public static assoc<T extends Record<string, unknown>, O extends Record<string, unknown>, V>(
+  public static assoc<
+    T extends Record<string, unknown>,
+    O extends Record<string, unknown>,
+    V,
+  >(
     obj: T,
     p1: O | AssocPath,
     val?: V[],

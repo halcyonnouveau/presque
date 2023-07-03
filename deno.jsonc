@@ -1,4 +1,6 @@
 {
+  "lock": false,
   "tasks": {
+    "dnt": "deno run -A scripts/dnt.ts"
   }
 }
