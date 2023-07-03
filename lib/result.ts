@@ -93,7 +93,7 @@ class _Ok<T> implements IOk<T> {
   }
 
   public map<U>(f: (value: T) => U): _Ok<U> {
-    return this.constructor(f(this.value));
+    return new _Ok(f(this.value));
   }
 
   public mapOr<U>(_: unknown, f: (value: T) => U): U {
@@ -152,7 +152,7 @@ class _Err<T> implements IErr<T> {
   }
 
   public mapErr<U>(f: (error: T) => U): _Err<U> {
-    return this.constructor(f(this.error));
+    return new _Err(f(this.error));
   }
 }
 

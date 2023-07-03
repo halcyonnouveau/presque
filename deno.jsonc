@@ -1,6 +1,7 @@
 {
   "lock": false,
   "tasks": {
+    "hook": "deno run -A https://deno.land/x/deno_hooks@0.1.1/mod.ts",
     "dnt": "deno run -A scripts/dnt.ts"
   }
 }
