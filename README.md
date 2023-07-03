@@ -1,6 +1,6 @@
 # presque
 
-[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/presque/result.ts)
+[![deno doc](https://badgers.space/badge/deno/doc/blue)](https://doc.deno.land/https/deno.land/x/presque/result.ts)
 [![npm](https://badgers.space/npm/version/presque)](https://www.npmjs.com/package/presque)
 
 An attempt to make TypeScript less bad by just adding features and utilities from more good languages in a way that's _close enough_.
