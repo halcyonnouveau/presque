@@ -21,8 +21,9 @@ export interface OkErr<T, E> {
   isErrAnd: (predicate: (value: E) => boolean) => boolean;
   /**
    * Returns the contained `Ok` value, throws with an optional message if the value is an `Err`.
+   * The expect message is recommended to be used to describe the reason you _expect_ the `Result` to be `Ok`.
    */
-  unwrap: (error?: string) => T | void;
+  unwrap: (expect?: string) => T | void;
   /**
    * Returns the contained `Ok` value or a provided default.
    */
@@ -123,8 +124,10 @@ class _Err<T> implements IErr<T> {
     return predicate(this.error);
   }
 
-  public unwrap(error?: string): void {
-    throw new UnwrapError(error);
+  public unwrap(expect?: string): void {
+    throw new UnwrapError(
+      expect ? `${expect}: ${this.error as string}` : this.error as string,
+    );
   }
 
   public unwrapOr<U>(fb: U): U {
