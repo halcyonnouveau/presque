@@ -88,27 +88,27 @@ export function assoc<
 type Fn<I, O> = (arg: I) => O;
 
 // DONT LAUGH. IT HAS TO BE LIKE THIS
-export function thread<A, B>(v: unknown, f1: Fn<A, B>): B;
+export function thread<A, B>(v: A, f1: Fn<A, B>): B;
 export function thread<A, B, C>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
 ): C;
 export function thread<A, B, C, D>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
 ): D;
 export function thread<A, B, C, D, E>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
   f4: Fn<D, E>,
 ): E;
 export function thread<A, B, C, D, E, F>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
@@ -116,7 +116,7 @@ export function thread<A, B, C, D, E, F>(
   f5: Fn<E, F>,
 ): F;
 export function thread<A, B, C, D, E, F, G>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
@@ -125,7 +125,7 @@ export function thread<A, B, C, D, E, F, G>(
   f6: Fn<F, G>,
 ): G;
 export function thread<A, B, C, D, E, F, G, H>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
@@ -135,7 +135,7 @@ export function thread<A, B, C, D, E, F, G, H>(
   f7: Fn<G, H>,
 ): H;
 export function thread<A, B, C, D, E, F, G, H, I>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
@@ -146,7 +146,7 @@ export function thread<A, B, C, D, E, F, G, H, I>(
   f8: Fn<H, I>,
 ): I;
 export function thread<A, B, C, D, E, F, G, H, I>(
-  v: unknown,
+  v: A,
   f1: Fn<A, B>,
   f2: Fn<B, C>,
   f3: Fn<C, D>,
